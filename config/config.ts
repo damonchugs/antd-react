@@ -70,12 +70,19 @@ export default defineConfig({
       component: './ListTableList',
     },
     {
+      name: 'mkdir',
+      icon: 'crown',
+      layout: false,
+      path: '/dir',
+      component: './Dir'
+    },
+    {
       path: '/',
       redirect: '/welcome',
     },
     {
       component: './404',
-    },
+    }
   ],
   // Theme for antd: https://ant.design/docs/react/customize-theme-cn
   theme: {
