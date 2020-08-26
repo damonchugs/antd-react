@@ -12,7 +12,6 @@ export interface MkdirImgType extends Partial<MkdirType> {
 const MkdirImg: React.FC<MkdirImgType> = (props) => {
     const [name, setImgName] = useState<string>(props.name)
     let { imgName } = useContext(props.apps)
-    console.log(imgName, 'asdsad')
 
     useEffect(() => {
         console.log(name, 'effect')
