@@ -8,6 +8,9 @@ export interface MkdirImgType extends Partial<MkdirType> {
     onChange: (res: string) => void,
     apps?: any
 }
+export interface EventsType extends Partial<Object> {
+    target: Object
+}
 
 const MkdirImg: React.FC<MkdirImgType> = (props) => {
     const [name, setImgName] = useState<string>(props.name)
@@ -23,7 +26,7 @@ const MkdirImg: React.FC<MkdirImgType> = (props) => {
         imgName = names
         return names
     }
-    const handleImgLoad = (events: Object) => {
+    const handleImgLoad = (events: EventsType) => {
         // eslint-disable-next-line no-console
         console.log(events.target.src.split('/pixiv/')[1], 'imgLoad')
     }

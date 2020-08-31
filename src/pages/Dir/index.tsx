@@ -11,7 +11,9 @@ import styles from './style.less'
 const AppContext = React.createContext({})
 const { Paragraph } = Typography
 
-const dirs = {
+import { MkdirType } from './data'
+
+const dirs: MkdirType = {
     name: 'pixiv',
     type: 'dir',
     child: [
@@ -28,7 +30,7 @@ const dirs = {
 
 const Mkdirs: React.FC<{}> = () => {
     const baseUrl: string = 'http://uf.damonchu.fun/'
-    const Dir: Object = { ...dirs }
+    const Dir: MkdirType = { ...dirs }
     const [name, handleChangeName] = useState<string>(Dir.child[0].name)
 
     // const handleImgLoad = (events: Object) => {
